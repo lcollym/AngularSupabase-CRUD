@@ -1,10 +1,28 @@
 div{
+    position: relative;
+    right: 50px ;
+    
 
-    margin: 0%;
-    padding: 0%;
+    /* border-color: aliceblue;
+    border-style: solid; */
    
 }
 
 input{
     width: 25%;
+
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    position: relative;
+    display: flex;
+    justify-content: center;
+right: 2%;
+    width: 20%;
+    top: 5px;
 }

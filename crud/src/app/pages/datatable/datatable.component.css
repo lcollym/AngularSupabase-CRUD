@@ -1,9 +1,11 @@
 div{
     position: relative;
-    width: 70%;
+    width: max-content;
     left: 25%;
-    margin-top: -17%;
-    
+    margin-top: -21.5%;
+    /* border-color: aliceblue;
+    border-style: solid; */
+   
    
 }
 
@@ -13,4 +15,14 @@ form{
     display: flex;
     right: -0%;
     width: 100%;
+    
+}
+
+button{
+  font-size: 100%;
+ 
+}
+
+.delete{
+    color: red;
 }
