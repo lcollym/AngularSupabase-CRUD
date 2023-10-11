@@ -1,0 +1,16 @@
+div{
+    position: relative;
+    width: 70%;
+    left: 25%;
+    margin-top: -17%;
+    
+   
+}
+
+form{
+    position: absolute;
+    top: -20%;
+    display: flex;
+    right: -0%;
+    width: 100%;
+}
