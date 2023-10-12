@@ -15,7 +15,8 @@ import { DatatableComponent } from './pages/datatable/datatable.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    
     
   ],
   providers: [],

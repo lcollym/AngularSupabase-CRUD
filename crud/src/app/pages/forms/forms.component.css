@@ -14,8 +14,11 @@ input{
 }
 
 h1{
+    position: relative;
     display: flex;
     justify-content: center;
+    left: 100px;
+    margin-top: 5%;
 }
 
 button{
@@ -24,5 +27,38 @@ button{
     justify-content: center;
 right: 2%;
     width: 20%;
-    top: 5px;
+    top: 10px;
 }
+
+@media (max-width: 851px) {
+    .form-group{
+       
+        position: fixed;
+        width: 70%;
+       
+        left: 20%;
+       
+    
+        /* border-color: aliceblue;
+        border-style: solid; */
+       
+    }
+    button{
+        
+        display: flex;
+        justify-content: center;
+        left: 32%;
+        width: 60%;
+        top: 400px;
+    }
+    input{
+        width: 85%;
+    
+    }
+    h1{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        left: 15%;
+    }
+  }

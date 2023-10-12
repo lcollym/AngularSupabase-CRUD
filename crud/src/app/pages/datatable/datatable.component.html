@@ -1,16 +1,17 @@
 <div class="d-flex justify-content-end">
 
     
-    <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <!-- <form class="form-inline">
+       
+      </form> -->
 
      
     
-    <table class="table table-dark">
+    <table class="table table-dark" >
       
-        <thead>
+        <thead >
+          <input class="form-control mr-sm-2" type="search"  aria-label="Search" placeholder="Search users" >
+          
           <tr>
             <th scope="col">#</th>
             <th scope="col">FirstName</th>
@@ -21,41 +22,18 @@
             <th scope="col" ngClass="delete">Action</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody *ngFor="let item of data ">
           <tr>
             <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>Larry</td>
-            <td>the Bird</td>
+            <td>{{item.FirstName}}</td>
+            <td>{{item.LastName}}</td>
+            <td>{{item.Email}}</td>
+            <td>{{item.Job}}</td>
+            <td>{{item.Phone}}</td>
             <button class="btn btn-danger">Delete</button>
            
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <button class="btn btn-danger">Delete</button>
-           
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <button class="btn btn-danger">Delete</button>
-            
-            
-            
-          </tr>
-          
-          
+   
         </tbody>
         
       </table>
