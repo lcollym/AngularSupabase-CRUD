@@ -1,20 +1,30 @@
 <div class="container">
 
-    <h1>ADD USERS</h1>
-    <form>
-        <div class="form-group">
-          <label >FirstName</label>
-          <input type="text" class="form-control"  placeholder="FirstName">
-          <label >LastName</label>
-          <input type="text" class="form-control"  placeholder="LastName">
-          <label >Email</label>
-          <input type="email" class="form-control"  placeholder="Email">
-          <label >Job</label>
-          <input type="text" class="form-control"  placeholder="Job">
-          <label >Phone number</label>
-         <input type="tel" class="form-control"  placeholder="number">
+   
+    <form [formGroup]="formUser" (ngSubmit)="postUsers()">
+   
+      <div class="form-group">
+        <label for="Name">FirstName</label>
+        <input type="text" class="form-control" formControlName="FirstName" >
+       <div *ngIf="formUser.get('FirstName')?.errors && formUser.get('FirstName')?.touched">
+        <div *ngIf="formUser.get('FirstName')?.hasError('required')">
+          <p class="alert alert-danger">field required</p>
         </div>
-        <button class="btn btn-primary">ADD USER</button>
-      </form>
+      </div>
+        <label for="LastName">LastName</label>
+        <input type="text" class="form-control" formControlName="LastName" required >
+        
+    
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" formControlName="Email" required >
+    
+        <label for="Job">Job</label>
+        <input type="text" class="form-control" formControlName="Job" required >
+    
+        <label for="Phone">Phone number</label>
+        <input type="tel" class="form-control" formControlName="Phone" required >
+      </div>
+      <button type="submit" class="btn btn-primary">ADD USER</button>
+    </form>
 
 </div>

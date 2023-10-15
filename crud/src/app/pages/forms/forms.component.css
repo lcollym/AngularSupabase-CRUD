@@ -30,6 +30,10 @@ right: 2%;
     top: 10px;
 }
 
+.alert{
+    width: 25%;
+}
+
 @media (max-width: 851px) {
     .form-group{
        

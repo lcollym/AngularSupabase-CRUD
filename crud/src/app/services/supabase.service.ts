@@ -1,34 +1,35 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import {Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SupabaseService {
-
-  constructor( private http:HttpClient ) { }
-
-  url = 'https://texnzhgobbvztboufitq.supabase.co/rest/v1/Employees?select=*';
+export class SupabaseService   {
+  urlget = 'https://texnzhgobbvztboufitq.supabase.co/rest/v1/Employees?select=*'
+  urlpost = "https://texnzhgobbvztboufitq.supabase.co/rest/v1/Employees"
   headers = new HttpHeaders({
-    apikey:
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRleG56aGdvYmJ2enRib3VmaXRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNzY1MDUsImV4cCI6MjAxMTk1MjUwNX0.nijTHbnc9Xe41IEDerD_POlnMWTyGao0MC7IPSCQLzk',
-    Authorization:
-      'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRleG56aGdvYmJ2enRib3VmaXRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNzY1MDUsImV4cCI6MjAxMTk1MjUwNX0.nijTHbnc9Xe41IEDerD_POlnMWTyGao0MC7IPSCQLzk',
-    'Content-Type': 'application/json',
-  });
+    apikey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRleG56aGdvYmJ2enRib3VmaXRxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NjM3NjUwNSwiZXhwIjoyMDExOTUyNTA1fQ.tuZdQtA8xrvFqV74yHedeUjjSrWago4P4qqNetdW7cM',
+    Authorization:'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRleG56aGdvYmJ2enRib3VmaXRxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NjM3NjUwNSwiZXhwIjoyMDExOTUyNTA1fQ.tuZdQtA8xrvFqV74yHedeUjjSrWago4P4qqNetdW7cM',
+      
+    });
+  constructor( private http:HttpClient ) {}
+
+  get():Observable<any> {
+    return this.http.get(this.urlget, {headers: this.headers});
+  }
+  
+  post(body:any){
+    console.log(this.headers);
+    console.log(this.urlpost);
+    return this.http.post(this.urlpost,body,{headers: this.headers});
+  }
+
+
+
 
 
   
-get():Observable<any> {
-  return this.http.get<any>(this.url, { headers: this.headers });
-}
 
-post(user: any) {
-  return this.http.post(
-    'https://texnzhgobbvztboufitq.supabase.co/rest/v1/Employees',user,
-    { headers: this.headers }
-  );
-}
 
 
 }

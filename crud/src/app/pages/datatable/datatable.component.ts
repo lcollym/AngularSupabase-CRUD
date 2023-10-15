@@ -15,9 +15,6 @@ export class DatatableComponent implements OnInit {
    
   }
 
-  ngOnAfterViewInit(){
-    this.getDataUsers();
-  }
 
 
   // methods
