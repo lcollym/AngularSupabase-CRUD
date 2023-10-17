@@ -1,4 +1,4 @@
-import { Component,OnInit,AfterViewInit } from '@angular/core';
+import { Component,OnInit,AfterViewInit, Input } from '@angular/core';
 import { SupabaseService } from 'src/app/services/supabase.service';
 
 @Component({
@@ -23,5 +23,14 @@ export class DatatableComponent implements OnInit {
       console.log(res)
       this.data = res;
     })
+  }
+
+  deleteUsers(id:number){
+    if(this.http.delete(id).subscribe()){
+      alert("Delete item")
+      this.getDataUsers();
+    }
+    
+    
   }
 }

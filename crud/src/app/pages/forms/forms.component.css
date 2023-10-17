@@ -30,9 +30,7 @@ right: 2%;
     top: 10px;
 }
 
-.alert{
-    width: 25%;
-}
+
 
 @media (max-width: 851px) {
     .form-group{
@@ -57,7 +55,7 @@ right: 2%;
     }
     input{
         width: 85%;
-    
+        
     }
     h1{
         display: flex;

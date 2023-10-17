@@ -1,18 +1,18 @@
-<div class="d-flex justify-content-end">
+<div class="container">
 
     
  
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search"  aria-label="Search" placeholder="Search users" >
+    
         
     </form>
      
     <table class="table table-dark" >
-    
+      <input class="form-control mr-sm-2" type="search"  aria-label="Search" placeholder="Search users" >
         <thead >
           
           <tr>
-            <th scope="col">#</th>
+       
             <th scope="col">FirstName</th>
             <th scope="col">LastName</th>
             <th scope="col">Email</th>
@@ -23,14 +23,13 @@
         </thead>
         <tbody *ngFor="let item of data ">
           <tr>
-            <th scope="row">1</th>
+         
             <td>{{item.FirstName}}</td>
             <td>{{item.LastName}}</td>
             <td>{{item.Email}}</td>
             <td>{{item.Job}}</td>
             <td>{{item.Phone}}</td>
-            <button class="btn btn-danger">Delete</button>
-           
+            <button class="btn btn-danger"(click)="deleteUsers(item.id)" >Delete</button>
           </tr>
    
         </tbody>

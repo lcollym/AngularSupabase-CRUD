@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule , FormGroup, Validators} from '@angular/forms';
 import { SupabaseService } from 'src/app/services/supabase.service';
+import { DatatableComponent } from '../datatable/datatable.component';
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
@@ -11,42 +12,49 @@ export class FormsComponent implements OnInit {
   
 formUser!: FormGroup;
 touched = false;
+
+
 constructor(private fb:FormBuilder, private http:SupabaseService){
  
 }
 
 ngOnInit(){
   this.formUser = this.fb.group({
-    FirstName: ['ricardo',[Validators.required]],
-    LastName: ['rivera',Validators.required],
-    Email: ['ricardorivera@gmail.com',[Validators.required,Validators.email]],
-    Job: ['uber',Validators.required],
-    Phone: ['8096854445',[Validators.required,Validators.minLength(10)]],
+    FirstName: ['juan',[Validators.required]],
+    LastName: ['castro',Validators.required],
+    Email: ['castroso@gmail.com',[Validators.required,Validators.email]],
+    Job: ['bartender',Validators.required],
+    Phone: ['8296854445',[Validators.required,Validators.minLength(10)]],
   });
-  
+ 
 
-}
 
-getUsers(){
-  this.http.get().subscribe()
-  
-}
+} 
+
 postUsers(){
 
   if(this.formUser.valid){
     this.http.post(this.formUser.value).subscribe(res => {console.log(res)})
-    console.log("func")
-    console.log(this.formUser.value)
+    alert("new user add")
+    
+   
+    location.reload()
+
+    // console.log("func")
+    // console.log(this.formUser.value)
   }else{
-    console.log("no valid")
+    alert("form no valid")
   }
-this.getUsers()
+
  
 }
 
 
 
 
+
 }
+
+
 
 

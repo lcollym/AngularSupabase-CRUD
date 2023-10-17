@@ -6,14 +6,10 @@
       <div class="form-group">
         <label for="Name">FirstName</label>
         <input type="text" class="form-control" formControlName="FirstName" >
-       <div *ngIf="formUser.get('FirstName')?.errors && formUser.get('FirstName')?.touched">
-        <div *ngIf="formUser.get('FirstName')?.hasError('required')">
-          <p class="alert alert-danger">field required</p>
-        </div>
-      </div>
+
         <label for="LastName">LastName</label>
         <input type="text" class="form-control" formControlName="LastName" required >
-        
+          
     
         <label for="Email">Email</label>
         <input type="email" class="form-control" formControlName="Email" required >
@@ -21,10 +17,12 @@
         <label for="Job">Job</label>
         <input type="text" class="form-control" formControlName="Job" required >
     
-        <label for="Phone">Phone number</label>
+        <label for="Phone">Phone</label>
         <input type="tel" class="form-control" formControlName="Phone" required >
       </div>
-      <button type="submit" class="btn btn-primary">ADD USER</button>
+      <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">ADD USER</button>
+      
     </form>
 
 </div>
+
