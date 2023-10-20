@@ -1,4 +1,4 @@
-import { Component,OnInit,AfterViewInit, Input } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { SupabaseService } from 'src/app/services/supabase.service';
 
 @Component({

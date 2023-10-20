@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule , FormGroup, Validators} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { SupabaseService } from 'src/app/services/supabase.service';
-import { DatatableComponent } from '../datatable/datatable.component';
+
 @Component({
   selector: 'app-forms',
   templateUrl: './forms.component.html',
@@ -20,11 +20,11 @@ constructor(private fb:FormBuilder, private http:SupabaseService){
 
 ngOnInit(){
   this.formUser = this.fb.group({
-    FirstName: ['juan',[Validators.required]],
-    LastName: ['castro',Validators.required],
-    Email: ['castroso@gmail.com',[Validators.required,Validators.email]],
-    Job: ['bartender',Validators.required],
-    Phone: ['8296854445',[Validators.required,Validators.minLength(10)]],
+    FirstName: ['',[Validators.required]],
+    LastName: ['',Validators.required],
+    Email: ['@gmail.com',[Validators.required,Validators.email]],
+    Job: ['',[Validators.required]],
+    Phone: ['',[Validators.required,Validators.pattern('[0-9]+'),Validators.minLength(10)]],
   });
  
 
@@ -35,13 +35,11 @@ postUsers(){
 
   if(this.formUser.valid){
     this.http.post(this.formUser.value).subscribe(res => {console.log(res)})
-    alert("new user add")
+    this.alertUserAdd()
+    console.log("func")
+    console.log(this.formUser.value)
     
-   
-    location.reload()
-
-    // console.log("func")
-    // console.log(this.formUser.value)
+    
   }else{
     alert("form no valid")
   }
@@ -49,9 +47,16 @@ postUsers(){
  
 }
 
+alertUserAdd(){
+  alert("add user")
+  location.reload();
+
+}
 
 
-
+Touch(){
+  this.touched = true;
+}
 
 }
 

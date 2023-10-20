@@ -1,24 +1,28 @@
 <div class="container">
-
-   
-    <form [formGroup]="formUser" (ngSubmit)="postUsers()">
-   
-      <div class="form-group">
-        <label for="Name">FirstName</label>
-        <input type="text" class="form-control" formControlName="FirstName" >
-
-        <label for="LastName">LastName</label>
-        <input type="text" class="form-control" formControlName="LastName" required >
-          
     
+
+  <form [formGroup]="formUser" (ngSubmit)="postUsers()">
+    
+      <div class="form-group">
+        <label for="FirstName">FirstName</label>
+        <input type="text" class="form-control is-invalid" formControlName="FirstName" required>
+        <p *ngIf="formUser.get('FirstName')?.touched" ngClass="validator" >Please FirstName required.</p>
+    
+        <label for="LastName">LastName</label>
+        <input type="text" class="form-control is-invalid" formControlName="LastName" required >
+        <p *ngIf="formUser.get('LastName')?.touched" ngClass="validator" >Please LastName required.</p>
+      
         <label for="Email">Email</label>
-        <input type="email" class="form-control" formControlName="Email" required >
+        <input type="email" class="form-control is-invalid" formControlName="Email" required email>
+        <p *ngIf="formUser.get('Email')?.touched" ngClass="validator" >Please enter a valid email address.</p>
     
         <label for="Job">Job</label>
-        <input type="text" class="form-control" formControlName="Job" required >
-    
+        <input type="text" class="form-control is-invalid" formControlName="Job" required >
+        <p *ngIf="formUser.get('Job')?.touched" ngClass="validator">Please Job required</p>
         <label for="Phone">Phone</label>
-        <input type="tel" class="form-control" formControlName="Phone" required >
+        <input type="tel" class="form-control is-invalid" formControlName="Phone" required pattern="[0-9]+" placeholder="input numbers">
+        <p *ngIf="formUser.get('Phone')?.touched" ngClass="validator" >Please Phone required.</p>
+        
       </div>
       <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">ADD USER</button>
       

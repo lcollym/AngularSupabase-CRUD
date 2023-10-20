@@ -17,11 +17,11 @@ import { DatatableComponent } from './pages/datatable/datatable.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
-    
+    ReactiveFormsModule,
+  ],
+  providers: [
     
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

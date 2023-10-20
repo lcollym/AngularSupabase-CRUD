@@ -1,6 +1,7 @@
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
 import {Observable } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +18,7 @@ export class SupabaseService   {
   constructor( private http:HttpClient ) {}
 
   get():Observable<any> {
-    return this.http.get(this.urlget, {headers: this.headers});
+    return this.http.get(this.urlget,{headers: this.headers});
   }
   
   post(body:any):Observable<any>{
@@ -35,12 +36,6 @@ export class SupabaseService   {
   
     return this.http.delete(`https://texnzhgobbvztboufitq.supabase.co/rest/v1/Employees?id=eq.${id}`, { headers });
   }
-
-
-
-
-  
-
 
 
 }

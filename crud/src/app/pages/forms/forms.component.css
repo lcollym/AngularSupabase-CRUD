@@ -30,7 +30,10 @@ right: 2%;
     top: 10px;
 }
 
-
+.validator{
+    font-size:medium;
+    color: red;
+}
 
 @media (max-width: 851px) {
     .form-group{
