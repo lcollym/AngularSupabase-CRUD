@@ -12,12 +12,14 @@ import { DatatableComponent } from './pages/datatable/datatable.component';
     AppComponent,
     FormsComponent,
     DatatableComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    
   ],
   providers: [
     
