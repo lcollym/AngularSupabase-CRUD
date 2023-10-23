@@ -1,0 +1,17 @@
+.container{
+    margin-top: 10%;
+    background-color:slategrey;
+    border-radius: 2%;
+}
+
+h3{
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    display: flex;
+    justify-content: end;
+}

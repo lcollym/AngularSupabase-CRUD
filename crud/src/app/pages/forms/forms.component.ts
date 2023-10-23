@@ -20,11 +20,11 @@ constructor(private fb:FormBuilder, private http:SupabaseService){
 
 ngOnInit(){
   this.formUser = this.fb.group({
-    FirstName: ['',[Validators.required,Validators.maxLength(10)]],
-    LastName: ['',Validators.required,Validators.maxLength(10)],
-    Email: ['',[Validators.required,Validators.email,Validators.maxLength(10)]],
+    FirstName: ['',[Validators.required]],
+    LastName: ['',Validators.required],
+    Email: ['@gmail.com',[Validators.required,Validators.email]],
     Job: ['',[Validators.required]],
-    Phone: ['',[Validators.required,Validators.pattern('[0-9]+'),Validators.maxLength(10)]],
+    Phone: ['',[Validators.required,Validators.pattern('[0-9]+')]],
   });
  
 

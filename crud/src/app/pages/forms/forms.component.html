@@ -9,15 +9,15 @@
         <!-- <p *ngIf="formUser.get('FirstName')?.touched" ngClass="validator" >Please FirstName required.</p> -->
     
         <label for="LastName">LastName</label>
-        <input type="text" class="form-control is-invalid" formControlName="LastName" required maxlength="10">
+        <input type="text" class="form-control is-invalid" formControlName="LastName" required maxlength="25">
     
       
         <label for="Email">Email</label>
-        <input type="email" class="form-control is-invalid" formControlName="Email" required email maxlength="10">
+        <input type="email" class="form-control is-invalid" formControlName="Email" required email maxlength="25">
 
     
         <label for="Job">Job</label>
-        <input type="text" class="form-control is-invalid" formControlName="Job" required maxlength="10">
+        <input type="text" class="form-control is-invalid" formControlName="Job" required maxlength="25">
         
         <label for="Phone">Phone</label>
         <input type="tel" class="form-control is-invalid" formControlName="Phone" required pattern="[0-9]+" placeholder="input numbers" maxlength="10">
