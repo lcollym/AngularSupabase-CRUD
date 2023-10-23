@@ -22,7 +22,7 @@ ngOnInit(){
   this.formUser = this.fb.group({
     FirstName: ['',[Validators.required]],
     LastName: ['',Validators.required],
-    Email: ['@gmail.com',[Validators.required,Validators.email]],
+    Email: ['',[Validators.required,Validators.email]],
     Job: ['',[Validators.required]],
     Phone: ['',[Validators.required,Validators.pattern('[0-9]+'),Validators.minLength(10)]],
   });

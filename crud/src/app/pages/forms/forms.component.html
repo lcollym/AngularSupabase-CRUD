@@ -20,13 +20,13 @@
         <input type="text" class="form-control is-invalid" formControlName="Job" required >
         
         <label for="Phone">Phone</label>
-        <input type="tel" class="form-control is-invalid" formControlName="Phone" required pattern="[0-9]+" placeholder="input numbers">
+        <input type="tel" class="form-control is-invalid" formControlName="Phone" required pattern="[0-9]+" placeholder="input numbers" minlength="10">
       
         
       </div>
       <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">ADD USER</button>
       
     </form>
-
+    <img src="https://icons8.com/icon/AngkmzgE6d3E/github" alt="">
 </div>
 

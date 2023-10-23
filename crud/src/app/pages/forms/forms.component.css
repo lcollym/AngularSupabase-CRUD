@@ -27,11 +27,21 @@ button{
     position: relative;
     display: flex;
     justify-content: center;
-    right: -3%;
+    right: -2%;
     width: 20%;
     top: 10px;
 }
 
+.logo{
+  
+        position: relative;
+        display: flex;
+        justify-content: center;
+        right: -2%;
+        width: 20%;
+        top: 10px;
+    
+}
 .validator{
     font-size:medium;
     color: red;
