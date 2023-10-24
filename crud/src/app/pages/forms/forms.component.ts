@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { SupabaseService } from 'src/app/services/supabase.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-forms',
@@ -35,29 +36,36 @@ postUsers(){
 
   if(this.formUser.valid){
     this.http.post(this.formUser.value).subscribe(res => {console.log(res)})
-    this.alertUserAdd()
-    console.log("func")
-    console.log(this.formUser.value)
+    this.alertAlert()
+    
     
     
   }else{
-    alert("form no valid")
+   
   }
 
  
 }
 
-alertUserAdd(){
-  alert("add user")
-  location.reload();
-
-}
 
 
 Touch(){
   this.touched = true;
 }
 
+
+
+alertAlert(){
+  Swal.fire({
+    icon: 'success',
+    title: 'Alert',
+    text: 'User add',
+    confirmButtonText: 'Okey',
+  }).then(() => {
+    window.location.reload();
+  });
+
+}
 }
 
 

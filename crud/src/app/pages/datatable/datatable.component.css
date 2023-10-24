@@ -1,45 +1,35 @@
-
-div{
-    position: absolute;
-    scroll-behavior: auto;
-    
-    
-}
-table{
+div {
+    max-width: 1520px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+       position: fixed;
+       top: 30%;
+       left: 35%;
    
+  }
   
-    
-    
-    font-size:large;
-   width: max-content;
-    margin-top: -27.9%;
-    left: 28%;
-    position: absolute;
-    /* border-color: aliceblue;
-    border-style: solid; */
-
-    
-   
- 
-}
-
-input{
+  table {
     width: 100%;
-    margin-top: -12%;
-    left: 0%;
-    position: absolute;
+    height: 100%;
+    background-color: black;
+   font-size:large;
+ 
     
-}
+  }
 
 
 
-button{
+button {
   font-size: 100%;
   width: 100%;
-  
 }
 
-.delete{
-    color: red;
+.delete {
+  color: red;
 }
 
+input {
+
+    
+  }

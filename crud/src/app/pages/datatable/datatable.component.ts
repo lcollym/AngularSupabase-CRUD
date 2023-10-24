@@ -1,6 +1,6 @@
 import { Component,OnInit} from '@angular/core';
 import { SupabaseService } from 'src/app/services/supabase.service';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-datatable',
   templateUrl: './datatable.component.html',
@@ -27,10 +27,24 @@ export class DatatableComponent implements OnInit {
 
   deleteUsers(id:number){
     if(this.http.delete(id).subscribe()){
-      alert("Delete item")
+      this.alertAlert()
+
       this.getDataUsers();
     }
     
     
   }
+
+  alertAlert(){
+    Swal.fire({
+      icon: 'warning',
+      title: 'Alert',
+      text: 'Delete User?',
+      confirmButtonText: 'Okey',
+    }).then(() => {
+      window.location.reload();
+    });
+    
+  }
+  
 }

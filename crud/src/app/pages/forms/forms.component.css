@@ -1,13 +1,11 @@
-/* div{
+div{
     position: relative;
-    right: -10px ;
-    margin-top: 5%;
+    left: 0px ;
     
-    width: auto;
-    border-color: aliceblue;
-    border-style: solid; 
+    
+
    
-} */
+}
 
 input{
     width: 25%;

@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { FormsComponent } from './pages/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DatatableComponent } from './pages/datatable/datatable.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
+import { NavbarComponent } from './pages/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     FormsComponent,
-    DatatableComponent
+    DatatableComponent,
+    NavbarComponent
     
   ],
   imports: [
@@ -19,6 +22,9 @@ import { DatatableComponent } from './pages/datatable/datatable.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    SweetAlert2Module.forRoot(),
+    NgxBootstrapIconsModule
+    
     
   ],
   providers: [
