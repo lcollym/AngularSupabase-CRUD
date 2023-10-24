@@ -5,6 +5,13 @@ a{
     
 
 }
+a:hover{
+    text-decoration: none;
+    color: rgb(31, 116, 190);
+   
+    
+
+}
 li{
     list-style: none;
     position: relative;
@@ -12,3 +19,4 @@ li{
 
  
 }
+
