@@ -9,12 +9,14 @@ import { DatatableComponent } from './pages/datatable/datatable.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { HomeComponent } from './pages/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     FormsComponent,
     DatatableComponent,
-    NavbarComponent
+    NavbarComponent,
+    HomeComponent
     
   ],
   imports: [

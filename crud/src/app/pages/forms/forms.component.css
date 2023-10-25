@@ -1,10 +1,17 @@
 div{
-    position: relative;
-    left: 0px ;
+    margin-top: 10%;
+    background-color:rgb(74, 86, 99);
+    border-radius: 2%;
+    
+
     
     
 
    
+}
+form{
+    
+    margin-left: 5%;
 }
 
 input{

@@ -1,12 +1,13 @@
 div {
     max-width: 1520px;
     max-height: 400px;
-    overflow: hidden;
+  
+
     overflow-y: scroll;
        position:fixed;
        top: 33%;
        left: 32%;
-   
+       animation: fadein 1s ease-in-out;
   }
   
   table {
@@ -14,11 +15,18 @@ div {
     height: 100%;
     background-color: black;
    font-size:large;
-   
+   animation: fadein 1s ease-in-out;
  
     
   }
-
+  @keyframes fadein {
+    from {
+      opacity:0;
+    }
+    to {
+      opacity: 2;
+    }
+  }
 
 
 button {
@@ -103,8 +111,10 @@ button {
     height: 100%;
     background-color: #26252d;
    font-size:large;
-   
+
  
     
   }
 }
+
+

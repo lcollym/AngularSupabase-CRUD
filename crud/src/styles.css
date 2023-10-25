@@ -4,6 +4,6 @@ body{
     background-color: black;
     color: aliceblue;
     font-size: x-large;
-    
+    overflow: hidden;
 }
 
