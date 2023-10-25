@@ -30,7 +30,7 @@ button{
     top: 10px;
 }
 
-.logo{
+/* .logo{
   
         position: relative;
         display: flex;
@@ -39,8 +39,37 @@ button{
         width: 20%;
         top: 10px;
     
-}
+} */
 .validator{
     font-size:medium;
     color: red;
 }
+
+
+/* Responsibe mobile */
+
+@media (max-width: 428px) {
+    div{
+ 
+     
+        position: relative;
+        left: 0px ;
+        
+        
+    
+       
+    }
+    input{
+        width: 100%;
+    
+    }
+    button{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        right: .51%;
+        width: 100%;
+        top: 10px;
+    }
+    
+  }

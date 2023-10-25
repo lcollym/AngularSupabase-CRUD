@@ -30,6 +30,8 @@ button {
   color: red;
 }
 
+/* Responsive Desktop */
+
 @media (width: 1920px) {
   div {
     max-width: 1520px;
@@ -40,5 +42,69 @@ button {
        top: 28%;
        left: 38%;
    
+  }
+}
+
+@media (width: 1440px) {
+  div {
+    max-width: 1520px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+       position:fixed;
+       top: 26%;
+       left: 28.3%;
+   
+  }
+
+}
+
+
+
+@media (width: 1280px) {
+  div {
+    max-width: 1520px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+       position:fixed;
+       top: 27%;
+       left: 28.3%;
+   
+  }
+}
+
+/* Responsive mobile */
+
+@media (max-width: 428px) {
+  div {
+    max-width: 1520px;
+    max-height: 400px;
+    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    position: relative;
+    /* top: 28%; */
+    left: 0%;
+  
+   
+  }
+
+  input{
+    width: 192%;
+  }
+  button {
+   
+    width: 100%;
+
+  }
+  table {
+    width: 100%;
+    height: 100%;
+    background-color: #26252d;
+   font-size:large;
+   
+ 
+    
   }
 }
