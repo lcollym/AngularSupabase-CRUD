@@ -46,6 +46,11 @@ button {
 .invisible{
   display: none;
 }
+
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra de desplazamiento */
+  color: transparent; /* Color de la barra de desplazamiento */
+}
 /* Responsive Desktop */
 
 @media (width: 1920px) {
