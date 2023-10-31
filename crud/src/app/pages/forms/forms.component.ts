@@ -25,7 +25,7 @@ ngOnInit(){
     LastName: ['',Validators.required],
     Email: ['@gmail.com',[Validators.required,Validators.email]],
     Job: ['',[Validators.required]],
-    Phone: ['',[Validators.required,Validators.pattern('[0-9]+')]],
+    Phone: ['',[Validators.required,Validators.pattern('[0-9]+'),Validators.maxLength(10),Validators.minLength(10)]],
   });
  
 

@@ -14,16 +14,15 @@
     
       
         <label for="Email">Email</label>
-        <input type="email" class="form-control is-invalid" formControlName="Email" required email maxlength="25">
+        <input type="email" class="form-control is-invalid" formControlName="Email" required email maxlength="15">
 
     
         <label for="Job">Job</label>
-        <input type="text" class="form-control is-invalid" formControlName="Job" required maxlength="25">
+        <input type="text" class="form-control is-invalid" formControlName="Job" required maxlength="15">
         
         <label for="Phone">Phone</label>
-        <input type="number" class="form-control is-invalid" formControlName="Phone" required pattern="[0-9]+" placeholder="input numbers"minlength="10" maxlength="10">
+        <input type="text" class="form-control is-invalid" formControlName="Phone" required  minlength="10" maxlength="10" placeholder="input numbers" >
       
-        
       </div>
       <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">ADD USER</button>
       

@@ -10,13 +10,16 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FilterPipe } from './Pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     FormsComponent,
     DatatableComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    FilterPipe
     
   ],
   imports: [
@@ -25,7 +28,8 @@ import { HomeComponent } from './pages/home/home.component';
     HttpClientModule,
     ReactiveFormsModule,
     SweetAlert2Module.forRoot(),
-    NgxBootstrapIconsModule
+    NgxBootstrapIconsModule,
+    FormsModule
     
     
   ],

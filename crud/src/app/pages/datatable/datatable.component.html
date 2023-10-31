@@ -2,7 +2,7 @@
 <div>
 
 
-  <input class="form-control mr-sm-2" type="search"  aria-label="Search" placeholder="Search users"  >
+  <input class="form-control mr-sm-2" type="texy"  aria-label="Search" placeholder="Search users"  name="data" [(ngModel)]="filter"  >
     <table class="table table-dark" >
       
       
@@ -18,7 +18,7 @@
             <th scope="col" ngClass="delete">Action</th>
           </tr>
         </thead>
-        <tbody *ngFor="let item of data ">
+        <tbody *ngFor="let item of data | filter:filter ">
           <tr>
          
             <td>{{item.FirstName}}</td>

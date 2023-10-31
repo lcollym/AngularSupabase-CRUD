@@ -20,3 +20,30 @@ a{
     top: 40%;
     width: 10%;
 }
+
+@media (max-width: 428px) {
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+    }
+    
+    
+    h1{
+        position: absolute;
+        top: 25%;
+    }
+    
+    h4{
+        position: absolute;
+        top: 32%;
+    }
+    
+    a{
+        position: absolute;
+        top: 40%;
+        width: 20%;
+    }
+    
+  }

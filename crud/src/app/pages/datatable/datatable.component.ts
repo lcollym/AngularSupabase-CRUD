@@ -8,7 +8,8 @@ import Swal from 'sweetalert2';
 })
 export class DatatableComponent implements OnInit {
   data: any
-  constructor(private http:SupabaseService){}
+  filter: any;
+  constructor(private http:SupabaseService){this.filter = '';}
 
   ngOnInit(){
     this.getDataUsers();
