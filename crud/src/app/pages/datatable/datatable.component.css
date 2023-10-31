@@ -5,8 +5,8 @@ div {
 
     overflow-y: scroll;
        position:fixed;
-       top: 33%;
-       left: 32%;
+       top: 29%;
+       left: 30%;
        animation: fadein 1s ease-in-out;
   }
   
@@ -19,6 +19,19 @@ div {
  
     
   }
+
+  .title{
+    font-size: smaller;
+    text-align: center;
+  }
+
+  .title:hover{
+    font-size: smaller;
+    text-align: center;
+    color: rgb(76, 76, 239);
+  }
+
+
   @keyframes fadein {
     from {
       opacity:0;
@@ -60,8 +73,9 @@ button {
     overflow: hidden;
     overflow-y: scroll;
        position:fixed;
-       top: 28%;
-       left: 38%;
+       top: 25%;
+       left: 30%;
+   
    
   }
 }
@@ -112,7 +126,8 @@ button {
   }
 
   input{
-    width: 190%;
+    width: 254%;
+
   }
   button {
    
@@ -120,13 +135,14 @@ button {
 
   }
   table {
-    width: 98%;
+    width: 254%;
     height: 100%;
     background-color: #26252d;
    font-size:large;
 
- 
-    
+  }
+  .title{
+    display: none;
   }
 }
 

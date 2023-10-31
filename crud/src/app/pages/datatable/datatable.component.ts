@@ -19,8 +19,8 @@ export class DatatableComponent implements OnInit {
 
 
   // methods
-  getDataUsers(){
-    this.http.get().subscribe(res => {
+  async getDataUsers(){
+    await this.http.get().subscribe(res => {
       console.log(res)
       this.data = res;
     })

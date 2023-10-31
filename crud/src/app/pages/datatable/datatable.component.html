@@ -1,6 +1,8 @@
 
-<div [ngClass]="{ invisible: data.length === 0 }">
 
+
+<div [ngClass]="{ invisible: data.length === 0 }">
+  <h1 ngClass="title">Admin users</h1>
 
 
   <input class="form-control mr-sm-2" type="texy"  aria-label="Search" placeholder="Search users"  name="data" [(ngModel)]="filter"  >
