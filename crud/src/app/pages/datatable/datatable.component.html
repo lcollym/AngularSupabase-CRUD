@@ -1,37 +1,32 @@
 
-<div>
+<div [ngClass]="{ invisible: data.length === 0 }">
+
 
 
   <input class="form-control mr-sm-2" type="texy"  aria-label="Search" placeholder="Search users"  name="data" [(ngModel)]="filter"  >
-    <table class="table table-dark" >
-      
-      
-        <thead >
-          
-          <tr>
-       
-            <th scope="col">FirstName</th>
-            <th scope="col">LastName</th>
-            <th scope="col">Email</th>
-            <th scope="col">Job</th>
-            <th scope="col">Phone</th>
-            <th scope="col" ngClass="delete">Action</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let item of data | filter:filter ">
-          <tr>
-         
-            <td>{{item.FirstName}}</td>
-            <td>{{item.LastName}}</td>
-            <td>{{item.Email}}</td>
-            <td>{{item.Job}}</td>
-            <td>{{item.Phone}}</td>
-            <button class="btn btn-danger"(click)="deleteUsers(item.id)" >Delete</button>
-            
-          </tr>
-   
-        </tbody>
-        
-      </table>
+  <table class="table table-dark" >
+    <thead>
+      <tr>
+        <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Job</th>
+        <th scope="col">Phone</th>
+        <th scope="col" ngClass="delete">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of data | filter:filter">
+      <tr>
+        <td>{{item.FirstName}}</td>
+        <td>{{item.LastName}}</td>
+        <td>{{item.Email}}</td>
+        <td>{{item.Job}}</td>
+        <td>{{item.Phone}}</td>
+        <button class="btn btn-danger" (click)="deleteUsers(item.id)">Delete</button>
+      </tr>
+    </tbody>
+  </table>
+  
+  
     
 </div>

@@ -38,6 +38,14 @@ button {
   color: red;
 }
 
+.error{
+  color: red;
+  text-align: center;
+}
+
+.invisible{
+  display: none;
+}
 /* Responsive Desktop */
 
 @media (width: 1920px) {
